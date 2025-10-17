@@ -44,12 +44,12 @@ enum MonthName: int
         string $prepositional
     ): array {
         return [
-            Case::NOMINATIVE->value => $nominative,
-            Case::GENITIVE->value => $genitive,
-            Case::DATIVE->value => $dative,
-            Case::ACCUSATIVE->value => $accusative,
-            Case::INSTRUMENTAL->value => $instrumental,
-            Case::PREPOSITIONAL->value => $prepositional,
+            GrammaticalCase::NOMINATIVE->value => $nominative,
+            GrammaticalCase::GENITIVE->value => $genitive,
+            GrammaticalCase::DATIVE->value => $dative,
+            GrammaticalCase::ACCUSATIVE->value => $accusative,
+            GrammaticalCase::INSTRUMENTAL->value => $instrumental,
+            GrammaticalCase::PREPOSITIONAL->value => $prepositional,
         ];
     }
 }

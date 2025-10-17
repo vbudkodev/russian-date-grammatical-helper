@@ -9,7 +9,7 @@ class MonthHelper
         return MonthName::tryFrom($month)?->forms() ?? [];
     }
 
-    public static function name(int $month, Case $case = Case::NOMINATIVE): ?string
+    public static function name(int $month, GrammaticalCase $case = GrammaticalCase::NOMINATIVE): ?string
     {
         $forms = self::forms($month);
         return $forms[$case->value] ?? null;
@@ -17,7 +17,7 @@ class MonthHelper
 
 public static function in(int $month): ?string
 {
-    $name = self::name($month, Case::PREPOSITIONAL);
+    $name = self::name($month, GrammaticalCase::PREPOSITIONAL);
         return $name ? "в {$name}" : null;
     }
 }

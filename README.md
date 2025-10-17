@@ -16,34 +16,34 @@ composer require vbudkodev/russian-date-grammatical-helper
 ### Month Names with Grammatical Cases
 ```php
 use RussianDateGrammaticalHelper\MonthHelper;
-use RussianDateGrammaticalHelper\Case;
+use RussianDateGrammaticalHelper\GrammaticalCase;
 
 // Basic usage
 echo MonthHelper::name(1); // 'январь' (nominative)
 
 // Specific cases
-echo MonthHelper::name(1, Case::GENITIVE); // 'января'
-echo MonthHelper::name(1, Case::PREPOSITIONAL); // 'январе'
+echo MonthHelper::name(1, GrammaticalCase::GENITIVE); // 'января'
+echo MonthHelper::name(1, GrammaticalCase::PREPOSITIONAL); // 'январе'
 
 // Prepositional phrase
 echo MonthHelper::in(5); // 'в мае'
 
 // All forms at once
 $forms = MonthHelper::forms(3);
-echo $forms[Case::NOMINATIVE->value]; // 'март'
-echo $forms[Case::GENITIVE->value]; // 'марта'
+echo $forms[GrammaticalCase::NOMINATIVE->value]; // 'март'
+echo $forms[GrammaticalCase::GENITIVE->value]; // 'марта'
 ```
 
 ## Available Cases
 
 All six Russian grammatical cases are supported via the Case enum:
 
-- ``Case::NOMINATIVE`` - Именительный (кто? что?)
-- ``Case::GENITIVE`` - Родительный (кого? чего?)
-- ``Case::DATIVE`` - Дательный (кому? чему?)
-- ``Case::ACCUSATIVE`` - Винительный (кого? что?)
-- ``Case::INSTRUMENTAL`` - Творительный (кем? чем?)
-- ``Case::PREPOSITIONAL`` - Предложный (о ком? о чём?)
+- ``GrammaticalCase::NOMINATIVE`` - Именительный (кто? что?)
+- ``GrammaticalCase::GENITIVE`` - Родительный (кого? чего?)
+- ``GrammaticalCase::DATIVE`` - Дательный (кому? чему?)
+- ``GrammaticalCase::ACCUSATIVE`` - Винительный (кого? что?)
+- ``GrammaticalCase::INSTRUMENTAL`` - Творительный (кем? чем?)
+- ``GrammaticalCase::PREPOSITIONAL`` - Предложный (о ком? о чём?)
 
 ## Roadmap
 

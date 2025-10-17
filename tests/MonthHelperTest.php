@@ -1,7 +1,7 @@
 <?php
 
 use RussianDateGrammaticalHelper\MonthHelper;
-use RussianDateGrammaticalHelper\Case;
+use RussianDateGrammaticalHelper\GrammaticalCase;
 use PHPUnit\Framework\TestCase;
 
 class MonthHelperTest extends TestCase
@@ -14,9 +14,9 @@ class MonthHelperTest extends TestCase
 
     public function test_cases()
     {
-        $this->assertEquals('января', MonthHelper::name(1, Case::GENITIVE));
-        $this->assertEquals('январю', MonthHelper::name(1, Case::DATIVE));
-        $this->assertEquals('январе', MonthHelper::name(1, Case::PREPOSITIONAL));
+        $this->assertEquals('января', MonthHelper::name(1, GrammaticalCase::GENITIVE));
+        $this->assertEquals('январю', MonthHelper::name(1, GrammaticalCase::DATIVE));
+        $this->assertEquals('январе', MonthHelper::name(1, GrammaticalCase::PREPOSITIONAL));
     }
 
     public function test_invalid_month_returns_null()
